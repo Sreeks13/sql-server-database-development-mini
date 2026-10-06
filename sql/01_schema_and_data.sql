@@ -1,6 +1,8 @@
 ﻿IF DB_ID('HarvestBoxDB') IS NOT NULL
 BEGIN
-    ALTER DATABASE HarvestBoxDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    ALTER DATABASE HarvestBoxDB
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
     DROP DATABASE HarvestBoxDB;
 END
 GO
@@ -61,7 +63,8 @@ VALUES
 ('Organic Carrots', 50.00);
 GO
 
-INSERT INTO Orders (CustomerID, ProductID, Quantity, OrderDate)
+INSERT INTO Orders
+    (CustomerID, ProductID, Quantity, OrderDate)
 VALUES
 (1, 1, 5, '2026-10-01'),
 (1, 2, 3, '2026-10-02'),
