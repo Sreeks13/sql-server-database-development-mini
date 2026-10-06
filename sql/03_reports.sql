@@ -1,10 +1,12 @@
 ﻿USE HarvestBoxDB;
 GO
 
--- REPORT 1: Detailed order report
+-- Detailed Order Report
+
 SELECT
     o.OrderID,
     c.CustomerName,
+    c.City,
     p.ProductName,
     o.Quantity,
     p.UnitPrice,
@@ -18,8 +20,8 @@ INNER JOIN Products AS p
 ORDER BY o.OrderDate, o.OrderID;
 GO
 
+-- Customer Order Summary
 
--- REPORT 2: Customer order summary
 SELECT
     c.CustomerName,
     COUNT(o.OrderID) AS OrderCount,
