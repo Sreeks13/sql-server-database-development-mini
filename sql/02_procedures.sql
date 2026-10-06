@@ -24,7 +24,6 @@ BEGIN
 END;
 GO
 
-
 CREATE OR ALTER PROCEDURE dbo.usp_GetCustomerOrderSummary
 AS
 BEGIN
